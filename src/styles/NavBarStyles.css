@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar {
+    background-color: green;
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+button:hover {
+    cursor: pointer
+}
+
+.Navbar .leftSide {
+    flex: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.Navbar .rightSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 25px;
+}
+
+.Navbar .leftSide .Links {
+    max-height: 80px;  
+}
+
+.Navbar .leftSide .Links .Link {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.Navbar .leftSide .Links:hover {
+    cursor: pointer;
+}
+
+.Navbar .leftSide button {
+    display: none;
+    margin-left: 20px;
+}
+
+.Navbar .rightSide button {
+    height: 32px;
+    width: 75px;
+    font-size: 16px;
+
+}
+
+.Navbar .leftSide #hidden {
+    display: flex;
+    
+}
+
+@media only screen and (max-width: 850px) {
+    .Navbar .leftSide .Links .Link {
+        font-size: 20px;   
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .Navbar .leftSide .Links .Link {
+        font-size: 15px;  
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .Navbar .leftSide button {
+        display: flex; 
+    }
+
+    .Navbar .leftSide .Links {
+        display: none;
+    }
+
+    .Navbar .leftSide #hidden {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        height: 230px;
+        max-height: 230px;
+        width: 100%;
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;  
+    }
+
+    .Navbar .leftSide #hidden .Link {
+        margin: 10px;
+        font-size: 25px;
+    }
+}

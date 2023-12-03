@@ -1,0 +1,336 @@
+{
+    "Facts": [
+        {
+            "fact": "Tennis is believed to have originated in the monastic cloisters in northern France in the 12th century. Interestingly, the ball was then struck with palm of the hand. At that time it was named “jeu de paume” (game of the palm). Rackets came into use during the 16th century.",
+            "image": "assets/tennisFactsImgs/fact1.jpg"
+        },
+        {
+            "fact": "The word “Tennis” comes from the Anglo-Norman term “Tenez.”",
+            "image": "assets/tennisFactsImgs/fact2.jpg"
+        },
+        {
+            "fact": "The modern game of tennis was created in the late 19th century by Major Walter Clopton Wingfield. He secured the patent for the game in February 1874.",
+            "image": "assets/tennisFactsImgs/fact3.jpg"
+        },
+        {
+            "fact": "Wimbledon, or the Wimbledon Championships, is the oldest tennis tournament in the world, and also considered to be the most prestigious.",
+            "image": "assets/tennisFactsImgs/fact4.jpg"
+        },
+        {
+            "fact": "The first Wimbledon was played in 1877. It is also the first of the four “Grand Slams” to be founded.",
+            "image": "assets/tennisFactsImgs/fact5.jpg"  
+        },
+        {
+            "fact": "The US Open was founded in 1881, the French in 1891, and the Australian in 1905. These four major tournaments have been designated as “Grand Slam” tournaments.",
+            "image": "assets/tennisFactsImgs/fact6.jpg"
+        },
+        {
+            "fact": "A player is said to have won a Career Grand Slam if they win all four majors at any time during their career; a Non calendar-Year Grand Slam if they win the four majors consecutively, but not in the same year, and a Grand Slam if they win all four majors in a single year.",
+            "image": "assets/tennisFactsImgs/fact7.jpg"
+        },
+        {
+            "fact": "The longest tennis match took 11 hours and 5 minutes to complete. It was played between John Isner and Nicolas Mahut. Ultimately, John Isner triumphed with a score line of 6-4, 3-6, 6-7, (7-9), 7-6(7-3), 70-68 (final set). It was played over three days in 2010. During this match, 123 balls were used and the scoreboard became moot - it could only go to 47-47 and the score went to 70-68.",
+            "image": "assets/tennisFactsImgs/fact8.jpg"
+        },
+        {
+            "fact": "Jack Harper beat J. Sandiford with a shocking 6-0, 6-0 score at the 1946 Surrey Open Hard Court Championships. The match lasted only 18 minutes, making it the shortest men’s singles match ever recorded.",
+            "image": "assets/tennisFactsImgs/fact9.jpg"
+        },
+        {
+            "fact": "The shortest women’s singles match on record was between Margaret Court and Darlene Hard in 1963 during the Eastern Grass Court Championship. The match lasted just 24 minutes and resulted in Margaret Court winning 6-1, 6-1.",
+            "image": "assets/tennisFactsImgs/fact10.jpg"
+        },
+        {
+            "fact": "Tennis is also an Olympic sport, and it can be played by wheelchair users.",
+            "image": "assets/tennisFactsImgs/fact11.jpg"
+        },
+        {
+            "fact": "The Davis Cup dates to 1900. It is an annual competition between men’s national teams.",
+            "image": "assets/tennisFactsImgs/fact12.jpg"
+            
+        },
+        {
+            "fact": "Did you know that the Fed Cup, which is an analogous competition for women’s national teams, was founded in 1963 to celebrate the 50th anniversary of the ITF?",
+            "image": "assets/tennisFactsImgs/fact13.jpg"
+        },
+        {
+            "fact": "The year 1968 marked the beginning of the open era in professional tennis. The French Open was the first “Grand Slam” event to go open.",
+            "image": "assets/tennisFactsImgs/fact14.jpg"
+        },
+        {
+            "fact": "Did you know that the tiebreaker, or tiebreak, was invented by James Van Alen in 1965?",
+            "image": "assets/tennisFactsImgs/fact15.jpg"
+        },
+        {
+            "fact": "Originally, two types of tiebreakers were introduced in the game by Van Alen. The one that would end after a maximum of 9 points was called the “sudden-death tiebreaker,” while the one with 12 points was called the “lingering death” tiebreak. The 12-points tiebreak continues until one player or team wins by a margin of at least two points and with a minimum of 7 points.",
+            "image": "assets/tennisFactsImgs/fact16.jpg"
+        },
+        {
+            "fact": "The Davis cup first adopted the tiebreaker in all sets except the final set in 1989, and made amendments in their rules to adopt the tiebreakers for all five sets in 2016.",
+            "image": "assets/tennisFactsImgs/fact17.jpg"
+        },
+        {
+            "fact": "1971 - the tiebreak was introduced in Wimbledon.",
+            "image": "assets/tennisFactsImgs/fact18.jpg"
+        },
+        {
+            "fact": "The French Open is the only major tournament to not use a tiebreak in the final set for singles.",
+            "image": "assets/tennisFactsImgs/fact19.jpg"
+        },
+        {
+            "fact": "Don Budge is the only male player in tennis history to have won six consecutive Grand Slam singles titles, from Wimbledon in 1937 to the US Open in 1938.",
+            "image": "assets/tennisFactsImgs/fact20.jpg"
+        },
+        {
+            "fact": "Only five players in history have won all four Grand Slams in the same year, and the last to do it was Steffi Graf in 1988. Don Budge (1938) and Rod Laver (1962 and 1969) were the only men to achieve the feat.",
+            "image": "assets/tennisFactsImgs/fact21.jpg"
+        },
+        {
+            "fact": "The fastest serve in men’s tennis came from the racket of Australian Sam Groth at 263.44 km/h.",
+            "image": "assets/tennisFactsImgs/fact22.jpg"
+        },
+        {
+            "fact": "Germany’s Sabine Lisicki hit a serve 210 km/h—the fastest ever recorded in women’s tennis.",
+            "image": "assets/tennisFactsImgs/fact23.jpg"
+        },
+        {
+            "fact": "In 2007, the prize money for Wimbledon winners became equal for men and women. 1968 was the first ever Wimbledon to offer prize money.",
+            "image": "assets/tennisFactsImgs/fact24.jpg"
+        },
+        {
+            "fact": "In 2022, the US Open offered $2,600,000 to the winner, the biggest prize value to date.",
+            "image": "assets/tennisFactsImgs/fact25.jpg"
+        },
+        {
+            "fact": "The term “Love” used in the scoring system of tennis is said to have originated from the French word for “egg,” l’oeuf, because a zero on a scoreboard resembles an egg. However, these claims are unsubstantiated.",
+            "image": "assets/tennisFactsImgs/fact26.jpg"
+        },
+        {
+            "fact": "Serena Williams is the winner of 23 major singles titles. She also holds 14 women’s doubles titles and 2 mixed doubles titles, making her the most successful female tennis player in the world.",
+            "image": "assets/tennisFactsImgs/fact27.jpg"
+        },
+        {
+            "fact": "As of June 2023, Novak Djokovic holds the world record for the most men’s tennis Grand Slam titles, totaling 23. With 22 Grand Slam singles titles, Rafael Nadal stands second on the men’s list with the most singles Grand Slam titles.",
+            "image": "assets/tennisFactsImgs/fact28.jpg"
+        },
+        {
+            "fact": "Fan favourite, Roger Federer has earned 20 Grand Slams singles titles.",
+            "image": "assets/tennisFactsImgs/fact29.jpg"
+        },
+        {
+            "fact": "The australian Margaret Court has earned 24 singles majors, holding the record for most Grand Slam titles in the women’s game.",
+            "image": "assets/tennisFactsImgs/fact30.jpg"
+        },
+        {
+            "fact": " Did you know that if the ball hits a player’s body or any part of their clothing before it lands, it is their opponent’s point (even if it would have gone out)?",
+            "image": "assets/tennisFactsImgs/fact31.jpg"
+        },
+        {
+            "fact": "Arthur Ashe was the first African American to win the US Open. He won the tournament for the first and the only time in 1968. He said -  “Start where you are. Use what you have. Do what you can.”",
+            "image": "assets/tennisFactsImgs/fact32.jpg"
+        },
+        {
+            "fact": "The average age of Ball Boys/Girls who serve at Wimbledon is 15. Every year, 250 of these young kids are selected to serve at the tournament.",
+            "image": "assets/tennisFactsImgs/fact33.jpg"
+        },
+        {
+            "fact": "Rufus - a Harris Hawk - is stationed at Wimbledon to keep its sky clear of local pigeons. Would you believe that this hawk has more than 10000 followers on X?",
+            "image": "assets/tennisFactsImgs/fact34.jpg"
+        },
+        {
+            "fact": "Players must submit their clothing to the All England Lawn Tennis and Croquet Club for approval before participating in the Wimbledon championships.",
+            "image": "assets/tennisFactsImgs/fact35.jpg"
+        },
+        {
+            "fact": "Every year, 24 tons of strawberries are consumed during Wimbledon.",
+            "image": "assets/tennisFactsImgs/fact36.jpg"
+        },
+        {
+            "fact": "The game of Tennis also became an indirect reason for the death of King James I of Scotland.",
+            "image": "assets/tennisFactsImgs/fact37.jpg"
+        },
+        {
+            "fact": "In the earlier years of Wimbledon, women wore full-length dresses.",
+            "image": "assets/tennisFactsImgs/fact38.jpg"
+        },
+        {
+            "fact": "Novak Djokovic holds the record for the highest career earnings to date. He has won an estimated $170 million in prize money throughout his tennis career. This is $35 million more than Rafael Nadal. Roger Federer is at the third spot in terms of the highest amount of career prize money. He has collected $131 million.",
+            "image": "assets/tennisFactsImgs/fact39.jpg"
+        },
+        {
+            "fact": "1972 is the year when The Association of Tennis Professionals was formed.",
+            "image": "assets/tennisFactsImgs/fact40.jpg"
+        },
+        {
+            "fact": "Roger Federer has scored 11,478 aces to this day, placing him in the third spot on the list of most aces, while John Isner tops the list with 14,260 aces.",
+            "image": "assets/tennisFactsImgs/fact41.jpg"
+        },
+        {
+            "fact": "As per The International Tennis Federation, the weight of a tennis ball must be between 56.0 and 59.4 grams. They must be between 2.5 to 2.8 inches in diameter.",
+            "image": "assets/tennisFactsImgs/fact42.jpg"
+        },
+        {
+            "fact": "Tennis balls were originally white. In 1986, yellow balls were first introduced at Wimbledon.",
+            "image": "assets/tennisFactsImgs/fact43.jpg"
+        },
+        {
+            "fact": "The overall permissible length of a tennis racket is 29 inches.",
+            "image": "assets/tennisFactsImgs/fact44.jpg"
+        },
+        {
+            "fact": "Metal racket frames were introduced at the beginning of 1967 after Wilson Sporting Goods created a metal racket. Wooden frames were used before that",
+            "image": "assets/tennisFactsImgs/fact45.jpg"
+        },
+        {
+            "fact": "Until 1975, three of the four Grand Slams - Wimbledon, the US Open and the Australian Open - were played on grass.",
+            "image": "assets/tennisFactsImgs/fact46.jpg"
+        },
+        {
+            "fact": "According to the International Tennis Federation, hard courts were used in official tournaments as far back as the 1940s.",
+            "image": "assets/tennisFactsImgs/fact47.jpg"
+        },
+        {
+            "fact": "Clay, Hard, Grass are the three types of court surfaces used in professional tennis but sometimes there is also Carpet and Wood tennis courts.",
+            "image": "assets/tennisFactsImgs/fact48.jpg"
+        },
+        {
+            "fact": "At Wimbledon, the grass is cut to a height of exactly 8 mm during the event.",
+            "image": "assets/tennisFactsImgs/fact49.jpg"
+        },
+        {
+            "fact": "An estimated 54,250 tennis balls are used during Wimbledon. Of these, around 700 go missing by the end of the tournament as spectators take wayward balls home with them as souvenirs.",
+            "image": "assets/tennisFactsImgs/fact50.jpg"
+        },
+        {
+            "fact": "Goran Ivanisevic is the only Wimbledon winner whose name alternates consonants and vowels.",
+            "image": "assets/tennisFactsImgs/fact51.jpg"
+        },
+        {
+            "fact": "Boris Becker is the youngest player ever to win a Wimbledon title. He is also the only unseeded player in history to win the prestigious title. He was 17 years old in 1985 when he won it.",
+            "image": "assets/tennisFactsImgs/fact52.jpg"
+        },
+        {
+            "fact": "During the 1984 season, Martina Navratilova achieved an astonishing 109-match winning streak, setting a record that remains unmatched to this day. Her dominance on the court during that period made her one of the most formidable players in history.",
+            "image": "assets/tennisFactsImgs/fact53.jpg"
+        },
+        {
+            "fact": "The Roland Garros, which hosts the French Open, is named after a French WWI aviator - Roland Garros.",
+            "image": "assets/tennisFactsImgs/fact54.jpg"
+        },
+        {
+            "fact": "In February 2020, Roger Federer and Rafael Nadal played in front of the largest recorded crowd. 51,954 people attended the tennis match held at the Cape Town Stadium in South Africa.",
+            "image": "assets/tennisFactsImgs/fact55.jpg"
+        },
+        {
+            "fact": "The winner’s trophy at Wimbledon remains on display at the All England Club’s museum as winners do not take their trophies with them. However, they are given small replicas of the official trophies.",
+            "image": "assets/tennisFactsImgs/fact56.jpg"
+        },
+        {
+            "fact": "The fastest forehand ever record belongs to the american James Blake during the US Open in 2011",
+            "image": "assets/tennisFactsImgs/fact57.jpg"
+        },
+        {
+            "fact": "Tanking is a term in tennis for losing a match or “fixing” it for some benefit.",
+            "image": "assets/tennisFactsImgs/fact58.jpg"
+        },
+        {
+            "fact": "Tennis elbow is an inflammation of the tendons that join the forearm muscles on the outside of the elbow.",
+            "image": "assets/tennisFactsImgs/fact59.jpg"
+        },
+        {
+            "fact": "The loudest grunt, which reached 105 decibels, came from Maria Sharapova in 2009 during Wimbledon.",
+            "image": "assets/tennisFactsImgs/fact60.jpg"
+        },
+        {
+            "fact": "The first set of sisters to ever win Olympic gold medals in tennis were Venus and Serena Williams.",
+            "image": "assets/tennisFactsImgs/fact61.jpg"
+        },
+        {
+            "fact": "The Olympics introduced tennis in 1896 and removed the game in 1924. However, tennis was reintroduced at the 1988 Olympics and continues to be a part of the games to this day.",
+            "image": "assets/tennisFactsImgs/fact62.jpg"
+        },
+        {
+            "fact": "In 1900, at the Summer Olympic Games in Paris, Charlotte Cooper from Great Britain became the first woman in history to win a First Place Prize in tennis (medals were not given until 1904).",
+            "image": "assets/tennisFactsImgs/fact63.jpg"
+        },
+        {
+            "fact": "During World War II, a bomb hit Centre Court in Wimbledon on 11 October 1940. It struck a corner of the competitors’ stand, and Wimbledon could not repair the damaged section until 1947.",
+            "image": "assets/tennisFactsImgs/fact64.jpg"
+        },
+        {
+            "fact": "The best portuguese player of all time is João Sousa. He has won 4 ATP titles on his on going carrer.",
+            "image": "assets/tennisFactsImgs/fact65.jpg"
+        },
+        {
+            "fact": "In the beginning, tennis courts were hourglass-shaped. Rectangular courts have been in existence since 1875.",
+            "image": "assets/tennisFactsImgs/fact66.jpg"
+        },
+        {
+            "fact": "The court surface affects the playing style of the game. On some surfaces the ball moves fast while on the others it moves slowly.",
+            "image": "assets/tennisFactsImgs/fact67.jpg"
+        },
+        {
+            "fact": "The International Tennis Federation is the governing body of Tennis and looks after the rules of the game.",
+            "image": "assets/tennisFactsImgs/fact68.jpg"
+        },
+        {
+            "fact": "For singles matches, the tennis court is 78 feet (23.77 m) long and 27 feet (8.23 m) wide. For doubles matches, the length of the court remains the same but the width is 36 feet (10.97 m).",
+            "image": "assets/tennisFactsImgs/fact69.jpg"
+        },
+        {
+            "fact": "On each side of the court, the area between the service line and the net is divided into two equal parts, the service courts, by the centre service line. The centre service line is drawn parallel to the singles sidelines and half way between them.",
+            "image": "assets/tennisFactsImgs/fact69.jpg"
+        },
+        {
+            "fact": "The service lines are 21 feet from the net on each side.",
+            "image": "assets/tennisFactsImgs/fact69.jpg"
+        },
+        {
+            "fact": "The lines at the ends of the court are called baselines and the lines at the sides of the court are called sidelines.",
+            "image": "assets/tennisFactsImgs/fact69.jpg"
+        },
+        {
+            "fact": "It is interesting to note here that all court measurements are made to the outside of the lines and all lines of the court shall be of the same colour clearly contrasting with the colour of the surface.",
+            "image": "assets/tennisFactsImgs/fact69.jpg"
+        },
+        {
+            "fact": "Some more clear space around the tennis court is needed for the players to reach overrun balls. Thus, an area of at least 60 feet in width and 120 feet in length is needed to build a comfortable tennis court.",
+            "image": "assets/tennisFactsImgs/fact70.jpg"
+        },
+        {
+            "fact": "The net which is placed at the centre of the court, parallel with the baselines, divides the court into two equal parts.",
+            "image": "assets/tennisFactsImgs/fact71.jpg"
+        },
+        {
+            "fact": "The net is 3 feet and 5 inches high at the post and 3 feet high at the centre.",
+            "image": "assets/tennisFactsImgs/fact72.jpg"
+        },
+        {
+            "fact": "In 2007, Roger Federer and Rafael Nadal played an exhibition event called “Battle of Surfaces”, where one side of the court was grass and the other was clay. Rafale Nadal ended up winning in tiebreak of the deciding set.",
+            "image": "assets/tennisFactsImgs/fact73.jpg"
+        },
+        {
+            "fact": "Grass court is the fastest type of the courts in common use. It tends to favor serve and volley tennis players. The serve plays an important role here because the ball bounces low on this surface and the points are short. Tournaments played on grass include Halle Open, the Stuttgart Open etc. Roger Federer is one of the greatest grass court players the game has ever seen. He has won a record of eight Wimbledon titles.",
+            "image": "assets/tennisFactsImgs/fact74.jpg"
+        },
+        {
+            "fact": "Clay court supports baseline players because the court surface allows higher bounce and hence the players get more time to get to the ball and return the shot. Players can also easily slide from side to side on the surface. Rafael Nadal is the world’s best clay court player. He has won 12 French Open Grand Slams.",
+            "image": "assets/tennisFactsImgs/fact75.jpg"
+        },
+        {
+            "fact": " The hard courts are made from asphalt or concrete with a coating of paint on the top and the paint is mixed with some sand to control the speed of the ball on the surface. The size and the quantity of the sand mixed in the paint affects the speed of the ball on the court. The US Open uses an acrylic hard court and the Australian Open uses a synthetic hard court. Tournaments played on hard court include Nitto ATP Finals, The Shanghai Masters etc. An advantage of the hard court is that it dries up very quickly and hence it is considered an all weather surface. Rallies on the hard court are longer than the grass but generally shorter than on clay. Novak Djokivic is arguibly the best hard court player of all time.",
+            "image": "assets/tennisFactsImgs/fact76.jpg"
+        },
+        {
+            "fact": "If an additional ball enters the court while a point is in progress, the point must be replayed.",
+            "image": "assets/tennisFactsImgs/fact77.jpg"
+        },
+        {
+            "fact": "If a doubles team audibly communicates loudly during a point, they forfeit the point.",
+            "image": "assets/tennisFactsImgs/fact78.jpg"
+        } 
+    ]
+}
+
+
+

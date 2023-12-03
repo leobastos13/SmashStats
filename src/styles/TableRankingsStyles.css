@@ -1,0 +1,40 @@
+.tableContainer {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-top: 2rem;
+    max-height: 420px;
+    overflow-y: scroll;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 800px;
+    height: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+th {
+    text-align: left;
+}
+
+thead th {
+    background-color: #55608f;
+    color: white;
+}
+tbody {
+    background-color:azure;
+}
+
+tbody td {
+    position: relative;
+}
+

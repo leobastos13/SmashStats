@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.DisplayFacts {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.DisplayFacts .leftSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 2rem;
+}
+
+.DisplayFacts .rightSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.DisplayFacts .leftSide img {
+    max-width: 600px;
+    max-height: 500px;
+}
