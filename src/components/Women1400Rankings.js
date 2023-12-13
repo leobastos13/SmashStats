@@ -8,7 +8,7 @@ import "../styles/TableRankingsStyles.css"
 const Women1400Rankings = () => {
     const { rankingsWomen } = React.useContext(APIDataContext);
 
-    const Top1400Women = rankingsWomen.slice(1200, 1400);
+    const Top1400Women = rankingsWomen.slice(1200, 1500);
     const data = useMemo(() => Top1400Women, []);
     const columns = useMemo(() => [
         {

@@ -1,0 +1,139 @@
+import React from "react"
+import { useState } from "react";
+import { APIDataContext } from "../App";
+import PlayerStats from "./PlayerStats";
+import PlayerTitles from "./PlayerTiltes";
+import '../styles/PlayerProfileStyles.css';
+import Button from '@mui/material/Button';
+
+const PlayerProfile = ({ player }) => {
+
+    const [overviewButtonDisabled, setOverviewButtonDisabled] = useState(true);
+    const [statsButtonDisabled, setStatsButtonDisabled] = useState(false);
+    const [titlesButtonDisabled, setTitlesButtonDisabled] = useState(false);
+
+    console.log(player);
+
+    // obter o ranking para mostrar no perfil
+    const { rankingsMen, rankingsWomen } = React.useContext(APIDataContext);
+    const allRankings = [...rankingsMen, ...rankingsWomen];
+
+    const playersRanks = allRankings.map(item1 => {
+        const playerKey = player.find(item2 => item2.player_key === item1.player_key);
+        if (playerKey) {
+            return {
+                rank: item1.place
+            }
+        }
+    });
+
+    const playerRank = [];
+
+    for (let i = 0; i < playersRanks.length; i++) {
+        if (playersRanks[i] !== undefined) {
+            playerRank.push(playersRanks[i]);
+        }
+    }
+    //console.log(playerRank);
+
+    let getRank = playerRank.map((item, index) => (
+        <p style={{ marginTop: '68px' }} key={index}>{item.rank}</p>
+    ));
+
+    // obter a idade do jogador
+    let mapBday = player.map((item) => {
+        return item.player_bday;
+    });
+
+    const obj = { "date": JSON.stringify(mapBday) };
+    const { date } = obj;
+    let yearString = date.substring(8);
+    let yearNumber = parseInt(yearString);
+    const currentYear = new Date();
+    let age = currentYear.getFullYear() - yearNumber;
+
+    let displayOverview = player.map((item, index) => (
+        <div className="playerOverview" key={index}>
+            <div className="nameImg">
+                <h1>{item.player_name}</h1>
+                {item.player_logo != null ? (
+                    <img src={item.player_logo}></img>
+                ) : (
+                    <img src="assets/icons/nopicture.jpg" alt="player profile"></img>
+                )}
+            </div>
+            <div className="infoCollumns">
+                <b>Rank:</b>
+                <p style={{ marginTop: '0px' }}>(singles)</p>
+                {getRank}
+            </div>
+            <div className="infoCollumns">
+                <b>Country:</b>
+                <p>{item.player_country}</p>
+            </div>
+            <div className="infoCollumns">
+                <b>Age:</b>
+                {age < 50 ? (
+                    <p>{age}</p>
+                ) : (
+                    <p>Unknown</p>
+                )}
+            </div>
+            <div className="infoCollumns">
+                <b>Birthday:</b>
+                {item.player_bday != "01.01.1970" && item.player_bday != null ? (
+                    <p>{item.player_bday}</p>
+                ) : (
+                    <p>Unknown</p>
+                )}
+            </div>
+        </div>
+    ))
+
+    const ShowOverview = () => {
+        document.getElementById('overview').style.display = 'block';
+        document.getElementById('stats').style.display = 'none';
+        document.getElementById('titles').style.display = 'none';
+        setOverviewButtonDisabled(true);
+        setStatsButtonDisabled(false);
+        setTitlesButtonDisabled(false);
+    }
+
+    const ShowStats = () => {
+        document.getElementById('stats').style.display = 'block';
+        document.getElementById('overview').style.display = 'none';
+        document.getElementById('titles').style.display = 'none';
+        setStatsButtonDisabled(true);
+        setOverviewButtonDisabled(false);
+        setTitlesButtonDisabled(false);
+    }
+
+    const ShowTitles = () => {
+        document.getElementById('titles').style.display = 'block';
+        document.getElementById('stats').style.display = 'none';
+        document.getElementById('overview').style.display = 'none';
+        setTitlesButtonDisabled(true);
+        setStatsButtonDisabled(false);
+        setOverviewButtonDisabled(false);
+    }
+
+    return (
+        <div>
+            <div style={{ marginTop: '50px' }}>
+                <Button id="showOverview" onClick={ShowOverview} disabled={overviewButtonDisabled}>Overview</Button>
+                <Button onClick={ShowStats} disabled={statsButtonDisabled}>Career Stats</Button>
+                <Button onClick={ShowTitles} disabled={titlesButtonDisabled}>Titles</Button>
+            </div>
+            <div id="overview" className="profile">
+                {displayOverview}
+            </div>
+            <div style={{ display: 'none' }} id="stats" className="profile">
+                <PlayerStats player={player}></PlayerStats>
+            </div>
+            <div style={{ display: 'none' }} id="titles" className="profile">
+                <PlayerTitles player={player}></PlayerTitles>
+            </div>
+        </div>
+    )
+}
+export default PlayerProfile

@@ -9,7 +9,7 @@ const Women200Rankings = () => {
     const { rankingsWomen } = React.useContext(APIDataContext);
 
     const Top200Women = rankingsWomen.slice(0, 200);
-    const data = useMemo(() => Top200Women, []);
+    const data = useMemo(() => Top200Women, [Top200Women]);
     const columns = useMemo(() => [
         {
             Header: "Rank",

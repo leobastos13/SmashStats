@@ -1,43 +1,52 @@
 import { useEffect, useState } from "react"
+import { db } from "../services/firebaseConfig"
 import NavBar from "../components/NavBar"
 import TennisFacts from '../components/TennisFacts.json'
 import "../styles/FactsStyles.css"
+import { doc, getDoc, setDoc } from "firebase/firestore"
+
 
 const Facts = () => {
+
+    const factsCollectionRef = doc(db, 'facts', 'tkA9R4CgjmNHmq7oA93k');
+    const getRandomIndex = () => Math.floor(Math.random() * facts.length);
 
     const [facts, setFacts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const getRandomIndex = () => Math.floor(Math.random() * facts.length);
-
     useEffect(() => {
-        console.log("Entrando no useEffect");
         setFacts(TennisFacts.Facts);
-        const lastUpdateDate = localStorage.getItem('lastUpdateDate');
-        const currentDate = new Date().toLocaleDateString();
 
-        console.log("lastUpdateDate:", lastUpdateDate);
-        console.log("currentDate:", currentDate);
+        const factUpdateRef = factsCollectionRef;
+        getDoc(factUpdateRef).then((docSnapshot) => {
+            const currentDate = new Date().toLocaleDateString();
 
-        if (lastUpdateDate !== currentDate) {
-            console.log("Atualizando fato...");
-            const newIndex = getRandomIndex();
-            setCurrentIndex(newIndex);
-            localStorage.setItem("lastUpdateDate", currentDate);
-            localStorage.setItem("currentIndex", newIndex);
-        } else {
-            console.log("Recuperando fato existente...");
-            const storedIndex = localStorage.getItem("currentIndex")
+            if (docSnapshot.exists()) {
+                const lastUpdateDate = docSnapshot.data().lastUpdateDate;
 
-            if (storedIndex !== null) {
-                setCurrentIndex(parseInt(storedIndex, 10));
+                if (lastUpdateDate !== currentDate) {
+                    const newIndex = getRandomIndex();
+                    setCurrentIndex(newIndex);
+                    setDoc(factUpdateRef, { lastUpdateDate: currentDate, currentIndex: newIndex });
+                } else {
+                    const data = docSnapshot.data();
+                    
+                    if (data) {
+                        setCurrentIndex(data.currentIndex);
+                    }
+                }
+            } else {
+                const newIndex = getRandomIndex();
+                setCurrentIndex(newIndex);
+                setDoc(factUpdateRef, { lastUpdateDate: currentDate, currentIndex: newIndex });
             }
-        }
-    }, []);
+        });
+      },[factsCollectionRef]); 
 
-    console.log(facts.length);
-    
-    let display = facts.length > currentIndex && (
+      let display = "";
+    //console.log(facts.length);
+    if (currentIndex !== 0) {
+          display = facts.length > currentIndex && (
         <div className="DisplayFacts">
             <div className="leftSide">
                 <img src={facts[currentIndex].image} alt={`Fact ${currentIndex + 1}`} style={{maxWidth: '640px', maxHeight: '447px'}}></img>
@@ -47,13 +56,14 @@ const Facts = () => {
             </div>
         </div>
     )
-
+    }
+  
     return (
         <div>
             <NavBar></NavBar>
-            <h1 className="text-center mt-4"><strong>Tennis Facts</strong></h1>
+            <h1 className="text-center mt-2"><strong> Daily Tennis Facts</strong></h1>
             <hr />
-            <p className="text-center text-decoration-underline">Here are some facts about tennis you may find interesting!</p>
+            <p className="mb-3 text-center">Here are some facts about tennis you may find interesting. Every day a different fact is shown! </p>
             {display}
         </div>
         

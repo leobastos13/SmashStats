@@ -42,7 +42,7 @@ const NavBar = () => {
                         <Link className="Link" to= "/home">Home</Link>
                         <Link className="Link" to= "/players">Players</Link>
                         <Link className="Link" to= "/rankings">Rankings</Link>
-                        <Link className="Link" to= "/facts">Facts</Link>
+                        <Link className="Link" to= "/facts">DailyFacts</Link>
                     </div>
                     <button onClick={HandleButton}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">

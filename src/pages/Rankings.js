@@ -1,6 +1,7 @@
 import NavBar from "../components/NavBar"
 import React from 'react';
 import {useState} from 'react'
+import Button from '@mui/material/Button';
 import Men200Rankings from "../components/Men200Rankings";
 import Men400Rankings from "../components/Men400Rankings";
 import Men600Rankings from "../components/Men600Rankings";
@@ -74,19 +75,19 @@ const Rankings = () => {
         <div>
             <NavBar></NavBar>
             <h1 className="text-center mt-2"><strong>Rankings</strong></h1>
+            <hr />
             <p className="mb-3 text-center">
                 <b>Note: </b>
                 As the ATP/WTA do not stand or support acts of war and aggression towards other countries, the russian and belarusian players are stripped of their country designation, having their nationality called "World".
             </p>
-            <hr />
             <div className="text-center">
-                <button onClick={HandleMenRankings}> Men's Rankings</button>
-                <button onClick={HandleWomenRankings}>Women's Rankings</button>
+                <button onClick={HandleMenRankings}> Men's Singles Rankings</button>
+                <button onClick={HandleWomenRankings}>Women's Singles Rankings</button>
             </div>
             <div id="MenRanking" className="d-block">
                 <div>
                     {currentTableMen === 0 && <Men200Rankings></Men200Rankings>}
-                </div>
+                </div> 
                 <div>
                     {currentTableMen === 1 && <Men400Rankings></Men400Rankings>}
                 </div>
@@ -114,8 +115,8 @@ const Rankings = () => {
                 <div>
                     {currentTableMen === 9 && <Men2000Rankings></Men2000Rankings>}
                 </div>
-                <button id="MenNext" onClick={HandleMenNext} className={currentTableMen === 9 ? 'd-none' : ''}>NextM</button>
-                <button id="MenPrevious" onClick={HandleMenPrevious} className={currentTableMen === 0 ? 'd-none' : ''}>PreviousM</button>
+                <Button id="MenNext" onClick={HandleMenNext} style={{position: 'absolute', bottom: '5px', right: '358px'}} className={currentTableMen === 9 ? 'd-none' : ''}>Next</Button>
+                <Button id="MenPrevious" onClick={HandleMenPrevious} style={{position: 'absolute', bottom: '5px', left: '360px'}} className={currentTableMen === 0 ? 'd-none' : ''}>Previous</Button>
             </div>
             <div id="WomenRanking" className="d-none">
                 <div>
@@ -139,8 +140,8 @@ const Rankings = () => {
                 <div>
                     {currentTableWomen === 6 && <Women1400Rankings></Women1400Rankings>}
                 </div>
-                <button id="WomenNext" onClick={HandleWomenNext} className={currentTableWomen === 6 ? 'd-none' : ''}>NextW</button>
-                <button id="WomenPrevious" onClick={HandleWomenPrevious} className={currentTableWomen === 0 ? 'd-none' : ''}>PreviousW</button>
+                <Button id="WomenNext" onClick={HandleWomenNext} style={{position: 'absolute', bottom: '5px', right: '358px'}} className={currentTableWomen === 6 ? 'd-none' : ''}>Next</Button>
+                <Button id="WomenPrevious" onClick={HandleWomenPrevious} style={{position: 'absolute', bottom: '5px', left: '360px'}} className={currentTableWomen === 0 ? 'd-none' : ''}>Previous</Button>
             </div>
 
         </div>

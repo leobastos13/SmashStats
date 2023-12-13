@@ -1,0 +1,106 @@
+.profile {
+    background-color: azure;  
+}
+
+.playerOverview {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoCollumns {
+    margin-top: 20px;
+}
+
+.infoCollumns p {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    font-size: 20px;
+}
+
+.infoCollumns b {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.nameImg {
+    text-align: center;
+    
+}
+
+.nameImg img {
+    max-width: 170px;
+}
+
+.playerStats {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+}
+
+.singlesStats {
+    flex: 50%;
+    text-align: center;
+}
+
+.singlesStats b {
+    font-size: 20px;
+}
+
+.doublesStats {
+    flex: 50%;
+    text-align: center;
+}
+
+.doublesStats b {
+    font-size: 20px;
+}
+
+.statsSinglesWins {
+    position: relative;
+    top: 74px;
+    right: 209px;
+    list-style-type: none;
+}
+
+.statsSinglesLosses {
+    position: relative;
+    top: -35px;
+    left: 160px;
+    list-style-type: none;
+}
+
+.statsSinglesTotals {
+    text-align: center;
+    list-style-type: none;
+}
+
+.statsDoublesWins {
+    position: relative;
+    top: 77px;
+    right: 180px;
+    list-style-type: none;
+}
+
+.statsDoublesLosses {
+    position: relative;
+    top: -35px;
+    left: 182px;
+    list-style-type: none;
+}
+
+.statsDoublesTotals {
+    text-align: center;
+    list-style-type: none;
+}
+
+.graphSize {
+    width: 750px !important;
+    height: 500px !important;
+    margin: auto;
+}
+
+
+
