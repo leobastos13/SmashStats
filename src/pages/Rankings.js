@@ -2,6 +2,7 @@ import NavBar from "../components/NavBar"
 import React from 'react';
 import {useState} from 'react'
 import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from "@mui/material";
 import Men200Rankings from "../components/Men200Rankings";
 import Men400Rankings from "../components/Men400Rankings";
 import Men600Rankings from "../components/Men600Rankings";
@@ -24,6 +25,14 @@ const Rankings = () => {
 
     const [currentTableMen, setCurrentTableMen] = useState(0);
     const [currentTableWomen, setCurrentTableWomen] = useState(0);
+
+    const theme = createTheme({
+        palette: {
+            primary: {
+                main: '#63ed85',
+            }
+        },
+    })
 
     const HandleMenRankings = (event) => {
         event.preventDefault();
@@ -75,14 +84,14 @@ const Rankings = () => {
         <div>
             <NavBar></NavBar>
             <h1 className="text-center mt-2"><strong>Rankings</strong></h1>
-            <hr />
+            <hr style={{color: '#63ed85', opacity: '3'}} />
             <p className="mb-3 text-center">
                 <b>Note: </b>
                 As the ATP/WTA do not stand or support acts of war and aggression towards other countries, the russian and belarusian players are stripped of their country designation, having their nationality called "World".
             </p>
             <div className="text-center">
-                <button onClick={HandleMenRankings}> Men's Singles Rankings</button>
-                <button onClick={HandleWomenRankings}>Women's Singles Rankings</button>
+                <button style={{backgroundColor: '#1d4050'}} className="border-0 rounded-3 text-white" onClick={HandleMenRankings}> Men's Singles Rankings</button>
+                <button style={{backgroundColor: '#1d4050'}} className="border-0 rounded-3 text-white" onClick={HandleWomenRankings}>Women's Singles Rankings</button>
             </div>
             <div id="MenRanking" className="d-block">
                 <div>
@@ -115,8 +124,10 @@ const Rankings = () => {
                 <div>
                     {currentTableMen === 9 && <Men2000Rankings></Men2000Rankings>}
                 </div>
-                <Button id="MenNext" onClick={HandleMenNext} style={{position: 'absolute', bottom: '5px', right: '358px'}} className={currentTableMen === 9 ? 'd-none' : ''}>Next</Button>
-                <Button id="MenPrevious" onClick={HandleMenPrevious} style={{position: 'absolute', bottom: '5px', left: '360px'}} className={currentTableMen === 0 ? 'd-none' : ''}>Previous</Button>
+                <ThemeProvider theme={theme}>
+                    <Button color="primary" id="MenNext" onClick={HandleMenNext} style={{position: 'absolute', bottom: '5px', right: '358px'}} className={currentTableMen === 9 ? 'd-none' : ''}>Next</Button>
+                    <Button color="primary" id="MenPrevious" onClick={HandleMenPrevious} style={{position: 'absolute', bottom: '5px', left: '360px'}} className={currentTableMen === 0 ? 'd-none' : ''}>Previous</Button>
+                </ThemeProvider>
             </div>
             <div id="WomenRanking" className="d-none">
                 <div>
@@ -140,8 +151,11 @@ const Rankings = () => {
                 <div>
                     {currentTableWomen === 6 && <Women1400Rankings></Women1400Rankings>}
                 </div>
-                <Button id="WomenNext" onClick={HandleWomenNext} style={{position: 'absolute', bottom: '5px', right: '358px'}} className={currentTableWomen === 6 ? 'd-none' : ''}>Next</Button>
-                <Button id="WomenPrevious" onClick={HandleWomenPrevious} style={{position: 'absolute', bottom: '5px', left: '360px'}} className={currentTableWomen === 0 ? 'd-none' : ''}>Previous</Button>
+                <ThemeProvider theme={theme}>
+                    <Button color="primary" id="WomenNext" onClick={HandleWomenNext} style={{position: 'absolute', bottom: '5px', right: '358px'}} className={currentTableWomen === 6 ? 'd-none' : ''}>Next</Button>
+                    <Button color="primary" id="WomenPrevious" onClick={HandleWomenPrevious} style={{position: 'absolute', bottom: '5px', left: '360px'}} className={currentTableWomen === 0 ? 'd-none' : ''}>Previous</Button>
+                </ThemeProvider>
+                
             </div>
 
         </div>

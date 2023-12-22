@@ -1,10 +1,21 @@
 import React from "react"
 import { useState } from "react";
 import { APIDataContext } from "../App";
+import { db } from "../services/firebaseConfig";
+import { useAuth } from "../services/firebaseConfig";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
 import PlayerStats from "./PlayerStats";
-import PlayerTitles from "./PlayerTiltes";
+import PlayerTilesSingles from "./PlayerTitlesSingles";
+import PlayerTilesDoubles from "./PlayerTitlesDoubles";
 import '../styles/PlayerProfileStyles.css';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { Alert, AlertTitle } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+
 
 const PlayerProfile = ({ player }) => {
 
@@ -12,8 +23,51 @@ const PlayerProfile = ({ player }) => {
     const [statsButtonDisabled, setStatsButtonDisabled] = useState(false);
     const [titlesButtonDisabled, setTitlesButtonDisabled] = useState(false);
 
-    console.log(player);
+    const theme = createTheme({
+        palette: {
+            primary: {
+                main: '#63ed85',
+            }
+        },
+    })
+    
+    // adicionar aos favoritos
+    const currentUser = useAuth();
+    const favouritesCollectionRef = collection(db, 'favourites');
+    
+    const AddFavourites = async () => {
+        const playerID = player.map((item) => (item.player_key));
+        
+        const querySnapshot = await getDocs(
+            query(favouritesCollectionRef,
+                where('userID', '==', currentUser.uid),
+                where('playerID', 'array-contains', playerID[0])
+            )
+        );
 
+        if (querySnapshot.size === 0) {
+            await addDoc(favouritesCollectionRef, {
+                userEmail: currentUser.email,
+                userID: currentUser.uid,
+                playerName: player.map((item) => (item.player_name)),
+                playerID: playerID,
+            })
+            document.getElementById('addButton').style.display = 'none';   
+            document.getElementById('alertSuccess').style.display = 'block';
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
+        }
+        else {
+            document.getElementById('addButton').style.display = 'none';
+            document.getElementById('alertWarning').style.display = 'block';
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);    
+        }
+        
+    }
+    
     // obter o ranking para mostrar no perfil
     const { rankingsMen, rankingsWomen } = React.useContext(APIDataContext);
     const allRankings = [...rankingsMen, ...rankingsWomen];
@@ -34,7 +88,6 @@ const PlayerProfile = ({ player }) => {
             playerRank.push(playersRanks[i]);
         }
     }
-    //console.log(playerRank);
 
     let getRank = playerRank.map((item, index) => (
         <p style={{ marginTop: '68px' }} key={index}>{item.rank}</p>
@@ -117,12 +170,33 @@ const PlayerProfile = ({ player }) => {
         setOverviewButtonDisabled(false);
     }
 
+    const ShowSinglesGraph = () => {
+        document.getElementById('singlesGraph').style.display = 'block';
+        document.getElementById('doublesGraph').style.display = 'none';
+    }
+
+    const ShowDoublesGraph = () => {
+        document.getElementById('singlesGraph').style.display = 'none';
+        document.getElementById('doublesGraph').style.display = 'block';
+    }
+
     return (
         <div>
-            <div style={{ marginTop: '50px' }}>
-                <Button id="showOverview" onClick={ShowOverview} disabled={overviewButtonDisabled}>Overview</Button>
-                <Button onClick={ShowStats} disabled={statsButtonDisabled}>Career Stats</Button>
-                <Button onClick={ShowTitles} disabled={titlesButtonDisabled}>Titles</Button>
+            <div style={{ marginTop: '100px' }}>
+                <ThemeProvider theme={theme}>
+                    <Button color="primary" id="showOverview" onClick={ShowOverview} disabled={overviewButtonDisabled}>Overview</Button>
+                    <Button color="primary" onClick={ShowStats} disabled={statsButtonDisabled}>Career Stats</Button>
+                    <Button color="primary" onClick={ShowTitles} disabled={titlesButtonDisabled}>Titles</Button>
+                </ThemeProvider>
+                <Button variant="outlined" endIcon= {<FavoriteBorderIcon></FavoriteBorderIcon>} id="addButton" onClick={AddFavourites} style={{position: 'absolute', right: '80px', top: '320px', backgroundColor: '#63ed85', color: 'white', borderColor: '#1d4050'}}>Add to favourites</Button>
+                <Alert id="alertSuccess" style={{display: 'none', backgroundColor: 'white', position: 'absolute', right: '80px', top: '264px'}} severity="success">
+                    <AlertTitle>Success</AlertTitle>
+                    The player was added to your favourites!
+                </Alert>
+                <Alert id="alertWarning" style={{display: 'none', backgroundColor: 'white', position: 'absolute', right: '80px', top: '264px'}} severity="warning">
+                    <AlertTitle>Warning</AlertTitle>
+                    The player was already in your favourites!
+                </Alert>
             </div>
             <div id="overview" className="profile">
                 {displayOverview}
@@ -131,7 +205,20 @@ const PlayerProfile = ({ player }) => {
                 <PlayerStats player={player}></PlayerStats>
             </div>
             <div style={{ display: 'none' }} id="titles" className="profile">
-                <PlayerTitles player={player}></PlayerTitles>
+                <div>
+                    <div id='singlesGraph' style={{textAlign: 'center', marginRight: '50px', marginLeft: '50px' }}>
+                        <IconButton onClick={ShowSinglesGraph} size="large" style={{position: 'relative', top: '43.5px', left: '270px', color: 'white'}}>
+                            <ArrowForwardIosIcon fontSize="inherit"></ArrowForwardIosIcon>
+                        </IconButton>
+                        <PlayerTilesSingles player={player}></PlayerTilesSingles>  
+                    </div>
+                    <div id='doublesGraph' style={{ display: 'none',  textAlign: 'center', marginRight: '50px', marginLeft: '50px', color: 'white'}}>
+                        <IconButton onClick={ShowDoublesGraph} size="large" style={{position: 'relative', top: '43.5px', right: '270px'}}>
+                            <ArrowBackIosIcon fontSize="inherit"></ArrowBackIosIcon>
+                        </IconButton>
+                        <PlayerTilesDoubles player={player}></PlayerTilesDoubles>
+                    </div>
+                </div>
             </div>
         </div>
     )

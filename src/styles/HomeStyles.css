@@ -1,0 +1,118 @@
+.Home {
+    display: flex;
+    margin-top: 55px;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.Home .LeftSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 2rem;
+}
+
+.Home .RightSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    text-align: center;
+}
+
+.Img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.Button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    right: 430px;
+    top: 40px;
+    background-color: #63ed85;
+    
+    
+}
+
+.Home2 {
+    display: flex;
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.Home2 .RightSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    text-align: center;
+}
+
+.Home2 .LeftSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 2rem;
+}
+
+.Home3 {
+    display: flex;
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.Home3 .RightSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    text-align: center;
+}
+
+.Home3 .LeftSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 2rem;
+}
+
+.Home4 {
+    display: flex;
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.Home4 .RightSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    text-align: center;
+}
+
+.Home4 .LeftSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 2rem;
+}

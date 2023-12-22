@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import Register from '../pages/Register';
 import Players from '../pages/Players';
 import Rankings from '../pages/Rankings';
+import Favourites from '../pages/Favourites';
 import Facts from '../pages/Facts';
 
 const AppRoutes = () => {
@@ -13,6 +14,7 @@ const AppRoutes = () => {
                 <Route path="/" element={<Login />}/>
                 <Route path="/home" element={<Home />}/>
                 <Route path="/register" element={<Register />}/>
+                <Route path="/favourites" element={<Favourites />}/>
                 <Route path="/players" element={<Players />}/>
                 <Route path="/rankings" element={<Rankings />}/>
                 <Route path="/facts" element={<Facts />}/>
@@ -21,5 +23,3 @@ const AppRoutes = () => {
     )
 }
 export default AppRoutes;
-
-// criar rotas para players e rankings!!!

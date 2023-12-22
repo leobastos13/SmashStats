@@ -13,7 +13,7 @@ const Players = () => {
     const namesMen = rankingsMen.map(item => item.player);
     const namesWomen = rankingsWomen.map(item => item.player);
     const allNames = [...namesMen, ...namesWomen];
-
+    
     const keysMen = rankingsMen.map(item => item.player_key);
     const keysWomen = rankingsWomen.map(item => item.player_key);
     const allKeys = [...keysMen, ...keysWomen];
@@ -50,8 +50,8 @@ const Players = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <h1 className="text-center mt-2"><strong> Players</strong></h1>
-            <hr />
+            <h1 className="text-center mt-2"><strong>Players</strong></h1>
+            <hr style={{color: '#63ed85', opacity: '3'}} />
             <p className="text-center">Search to check the profile of a specific tennis player!</p>
             <SearchBar
                 playersNames={allNames}

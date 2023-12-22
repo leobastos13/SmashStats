@@ -81,7 +81,7 @@ const PlayerStats = ({ player }) => {
                     </li>
                 </ul>
             </div>
-            <Divider style={{backgroundColor: 'black'}} orientation="vertical" flexItem></Divider>
+            <Divider style={{backgroundColor: 'white', opacity: '3'}} orientation="vertical" flexItem></Divider>
             <div className="doublesStats">
                 <b>Doubles:</b>
                 <ul className="statsDoublesWins">

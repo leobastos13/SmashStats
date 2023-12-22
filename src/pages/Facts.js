@@ -27,7 +27,9 @@ const Facts = () => {
                 if (lastUpdateDate !== currentDate) {
                     const newIndex = getRandomIndex();
                     setCurrentIndex(newIndex);
-                    setDoc(factUpdateRef, { lastUpdateDate: currentDate, currentIndex: newIndex });
+                    setDoc(factUpdateRef, { 
+                        lastUpdateDate: currentDate, 
+                        currentIndex: newIndex });
                 } else {
                     const data = docSnapshot.data();
                     
@@ -62,7 +64,7 @@ const Facts = () => {
         <div>
             <NavBar></NavBar>
             <h1 className="text-center mt-2"><strong> Daily Tennis Facts</strong></h1>
-            <hr />
+            <hr style={{color: '#63ed85', opacity: '3'}} />
             <p className="mb-3 text-center">Here are some facts about tennis you may find interesting. Every day a different fact is shown! </p>
             {display}
         </div>

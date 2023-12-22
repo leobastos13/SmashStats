@@ -2,7 +2,7 @@ import '../styles/PlayerProfileStyles.css';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
-const GraphDoubles = ({ player }) => {
+const PlayerTilesDoubles = ({ player }) => {
 
     let mapTitles = player.map((item) => {
         return item.tournaments;
@@ -49,7 +49,7 @@ const GraphDoubles = ({ player }) => {
             {
                 label: 'Number of Titles',
                 data: Object.values(doublesTitlesSeason),
-                backgroundColor: '#55608f',
+                backgroundColor: '#63ed85',
             },
         ],
     }
@@ -69,4 +69,4 @@ const GraphDoubles = ({ player }) => {
         </div>
     )
 }
-export default GraphDoubles
+export default PlayerTilesDoubles

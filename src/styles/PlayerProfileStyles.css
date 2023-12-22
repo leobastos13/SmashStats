@@ -1,5 +1,7 @@
 .profile {
-    background-color: azure;  
+    background-color: #1d4050;  
+    color: white;
+    padding-bottom: 15px;
 }
 
 .playerOverview {

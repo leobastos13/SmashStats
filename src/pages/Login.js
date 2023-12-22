@@ -56,16 +56,19 @@ const Login = () => {
     }
 
     return (
+        <div style={{backgroundColor: '#1d4050', padding: '32px'}}>
         <div className="container d-flex align-items-center justify-content-center flex-column mt-5 mb-5">
-            <div className="header d-flex align-items-center flex-column mb-4">
-                <h1>Welcome</h1>
+            <div style={{paddingLeft: '570px', position: 'relative', top: '25px'}} className="header d-flex align-items-center flex-column mb-4 text-white">
+                <h1>Welcome!</h1>
                 <h3>Log in into your account!</h3>
+                <img style={{paddingRight: '1360px', position: 'relative', top: '-103px'}} src="assets/icons/logo-removebg-preview.png"></img>
             </div>
-            <form className="d-flex align-items-center flex-column">
+            <form style={{paddingLeft: '570px', marginTop: '-65px'}} className="d-flex align-items-center flex-column">
                 <div>
-                    <label className="fw-400 fs-4 mb-2" htmlFor="email">Email</label>
+                    <label className="fw-400 fs-4 mb-2 text-white" htmlFor="email">Email</label>
                     <input
-                        className="d-flex flex-row align-items-start p-2 w-100 h-100 border border-primary rounded-3 mb-3"
+                        className="d-flex flex-row align-items-start p-2 w-100 h-100 rounded-3 mb-3"
+                        style={{border: 'solid 2px', borderColor: '#63ed85'}}
                         type="text"
                         name="email"
                         id="email"
@@ -74,9 +77,10 @@ const Login = () => {
                     ></input>
                 </div>
                 <div>
-                    <label className="fw-400 fs-4 mb-2" htmlFor="password">Password</label>
+                    <label className="fw-400 fs-4 mb-2 text-white" htmlFor="password">Password</label>
                     <input
-                        className="d-flex flex-row align-items-start p-2 w-100 h-100 border border-primary rounded-3 mb-3"
+                        className="d-flex flex-row align-items-start p-2 w-100 h-100 rounded-3 mb-3"
+                        style={{border: 'solid 2px', borderColor: '#63ed85'}}
                         type="password"
                         name="password"
                         id="password"
@@ -84,23 +88,23 @@ const Login = () => {
                         onChange={HandlePasswordInput}
                     ></input>
                 </div>
-                <button className="w-100 h-100 bg-primary border-0 rounded-3 text-light d-flex justify-content-center align-items-center gap-2 fs-5" onClick={(event) => {HandleLogin(event)}}>
+                <button style={{backgroundColor: '#63ed85'}} className="w-100 h-100 border-0 rounded-3 text-light d-flex justify-content-center align-items-center gap-2 fs-5" onClick={(event) => {HandleLogin(event)}}>
                     Log in
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                     </svg>
                     <Link to= "/home"></Link>
                 </button>
-                <Link style={{cursor: 'default'}} className="fw-400 text-decoration-underline text-primary" to="#">Forgot your password?</Link>
+                <Link style={{cursor: 'default', color: '#63ed85' }} className="fw-400 text-decoration-underline" to="#">Forgot your password?</Link>
                 <div className="mt-5">
-                    <button className='bg-white border-primary rounded-3 d-flex flex-row justify-content-center align-items-center' onClick={(event) => {signInWithGoogle(event)}}>
+                    <button style={{borderColor: '##63ed85', marginTop: '-25px'}} className='bg-white rounded-3 d-flex flex-row justify-content-center align-items-center' onClick={(event) => {signInWithGoogle(event)}}>
                         <div className="text-secondary fs-6 fw-400 letter-spacing-md">Continue with Google</div>
                     </button>
                 </div> 
-                <p className="mt-3 mb-0">Don't have an account?</p>
-                <Link className="fw-400 fs-6 text-decoration-underline text-primary" to="/register">Sign Up here!</Link>
+                <p className="mt-3 mb-0 text-white">Don't have an account?</p>
+                <Link style={{color: '#63ed85'}} className="fw-400 fs-6 text-decoration-underline " to="/register">Sign Up here!</Link>
             </form>
-
+        </div>
         </div>
 
     )

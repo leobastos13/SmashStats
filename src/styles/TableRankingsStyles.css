@@ -27,11 +27,12 @@ th {
 }
 
 thead th {
-    background-color: #55608f;
+    background-color: #63ed85;
     color: white;
 }
 tbody {
-    background-color:azure;
+    background-color: #1d4050;
+    color: white;
 }
 
 tbody td {
