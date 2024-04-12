@@ -28,8 +28,6 @@ const Players = () => {
         players.push(player);
     }
 
-    //console.log(players);
-
     const getPlayer = async (playerKey) => {
         try {
             const response = await fetch(`https://api.api-tennis.com/tennis/?method=get_players&player_key=${playerKey}&APIkey=${APIKey}`);
@@ -39,7 +37,6 @@ const Players = () => {
             }
             const selectedPlayer = await response.json();
             setSelectedPlayer([...selectedPlayer.result]);
-            //console.log(selectedPlayer.result);
             return selectedPlayer.result;
       
           } catch (error) {

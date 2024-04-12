@@ -46,7 +46,7 @@ const Facts = () => {
       },[factsCollectionRef]); 
 
       let display = "";
-    //console.log(facts.length);
+    
     if (currentIndex !== 0) {
           display = facts.length > currentIndex && (
         <div className="DisplayFacts">

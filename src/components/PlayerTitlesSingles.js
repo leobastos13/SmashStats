@@ -1,4 +1,5 @@
 import '../styles/PlayerProfileStyles.css';
+import PlayerTilesDoubles from "./PlayerTitlesDoubles";
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
@@ -16,6 +17,11 @@ const PlayerTilesSingles = ({ player }) => {
         result[season] = (result[season] || 0) + 1;
         return result;
     }, {});
+
+    const ShowDoublesGraph = () => {
+        document.getElementById('singlesGraph').style.display = 'none';
+        document.getElementById('doublesGraph').style.display = 'block';
+    }
 
     ChartJS.register(
         CategoryScale,
@@ -60,8 +66,13 @@ const PlayerTilesSingles = ({ player }) => {
                     <Bar className='graphSize' options={options} data={data}></Bar>
                 </div>
             ) : (
-                <h3>This player does not have any singles title!</h3>
+                <div style={{marginTop: '50px'}}>
+                    <b style={{fontSize: '20px'}}>This player does not have any singles title!</b>
+                </div>
             )}
+            <div>
+                <PlayerTilesDoubles player={player}></PlayerTilesDoubles>
+            </div>
         </div>
 
 

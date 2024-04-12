@@ -2,7 +2,6 @@ import React from 'react';
 import { APIDataContext } from "../App"
 import { useTable } from 'react-table'
 import { useMemo } from "react";
-//Este hook serve para guardar informação de um render para outro ou seja quando há um re-render a informação continua lá! Só funciona para valores e assim estes não precisam de ser calculados outra vez quando há um render!
 import "../styles/TableRankingsStyles.css"
 
 const Men1800Rankings = () => {

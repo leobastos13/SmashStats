@@ -64,7 +64,10 @@ const PlayerTilesDoubles = ({ player }) => {
                     <Bar className='graphSize' options={options} data={data}></Bar>
                 </div>
             ) : (
-                <h3>This player does not have any doubles title!</h3>
+                <div style={{marginTop: '50px'}}>
+                    <b style={{fontSize: '20px'}}>This player does not have any doubles title!</b>
+                </div>
+                
             )}
         </div>
     )

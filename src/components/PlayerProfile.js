@@ -6,12 +6,8 @@ import { useAuth } from "../services/firebaseConfig";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
 import PlayerStats from "./PlayerStats";
 import PlayerTilesSingles from "./PlayerTitlesSingles";
-import PlayerTilesDoubles from "./PlayerTitlesDoubles";
 import '../styles/PlayerProfileStyles.css';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Alert, AlertTitle } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -31,7 +27,6 @@ const PlayerProfile = ({ player }) => {
         },
     })
     
-    // adicionar aos favoritos
     const currentUser = useAuth();
     const favouritesCollectionRef = collection(db, 'favourites');
     
@@ -68,7 +63,6 @@ const PlayerProfile = ({ player }) => {
         
     }
     
-    // obter o ranking para mostrar no perfil
     const { rankingsMen, rankingsWomen } = React.useContext(APIDataContext);
     const allRankings = [...rankingsMen, ...rankingsWomen];
 
@@ -93,7 +87,6 @@ const PlayerProfile = ({ player }) => {
         <p style={{ marginTop: '68px' }} key={index}>{item.rank}</p>
     ));
 
-    // obter a idade do jogador
     let mapBday = player.map((item) => {
         return item.player_bday;
     });
@@ -170,16 +163,6 @@ const PlayerProfile = ({ player }) => {
         setOverviewButtonDisabled(false);
     }
 
-    const ShowSinglesGraph = () => {
-        document.getElementById('singlesGraph').style.display = 'block';
-        document.getElementById('doublesGraph').style.display = 'none';
-    }
-
-    const ShowDoublesGraph = () => {
-        document.getElementById('singlesGraph').style.display = 'none';
-        document.getElementById('doublesGraph').style.display = 'block';
-    }
-
     return (
         <div>
             <div style={{ marginTop: '100px' }}>
@@ -206,17 +189,8 @@ const PlayerProfile = ({ player }) => {
             </div>
             <div style={{ display: 'none' }} id="titles" className="profile">
                 <div>
-                    <div id='singlesGraph' style={{textAlign: 'center', marginRight: '50px', marginLeft: '50px' }}>
-                        <IconButton onClick={ShowSinglesGraph} size="large" style={{position: 'relative', top: '43.5px', left: '270px', color: 'white'}}>
-                            <ArrowForwardIosIcon fontSize="inherit"></ArrowForwardIosIcon>
-                        </IconButton>
+                    <div style={{textAlign: 'center', marginRight: '50px', marginLeft: '50px' }}>
                         <PlayerTilesSingles player={player}></PlayerTilesSingles>  
-                    </div>
-                    <div id='doublesGraph' style={{ display: 'none',  textAlign: 'center', marginRight: '50px', marginLeft: '50px', color: 'white'}}>
-                        <IconButton onClick={ShowDoublesGraph} size="large" style={{position: 'relative', top: '43.5px', right: '270px'}}>
-                            <ArrowBackIosIcon fontSize="inherit"></ArrowBackIosIcon>
-                        </IconButton>
-                        <PlayerTilesDoubles player={player}></PlayerTilesDoubles>
                     </div>
                 </div>
             </div>
