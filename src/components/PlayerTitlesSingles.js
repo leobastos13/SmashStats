@@ -18,11 +18,7 @@ const PlayerTilesSingles = ({ player }) => {
         return result;
     }, {});
 
-    const ShowDoublesGraph = () => {
-        document.getElementById('singlesGraph').style.display = 'none';
-        document.getElementById('doublesGraph').style.display = 'block';
-    }
-
+    
     ChartJS.register(
         CategoryScale,
         LinearScale,
