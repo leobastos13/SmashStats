@@ -14,7 +14,6 @@ const Register = () => {
    
     const HandleRegister = (event) => {
         event.preventDefault();
-        console.log('olá');
         setLoading(true);
         try {
             createUserWithEmailAndPassword(email, password);
