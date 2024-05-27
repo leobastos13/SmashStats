@@ -5,7 +5,7 @@ export const APIDataContext = React.createContext();
 
 function App() {
 
-  const APIKey = "56d6379cb1ed7cff07441bbd42b7f45409aee36a746f92b39bcde18da9f29de7";
+  const APIKey = "ffb2d886d9d79470681232caf4a582db832601c90383730504fc3e559a7b36c0";
 
   const [rankingsMen, setRankingsMen] = useState([]);
   const [rankingsWomen, setRankingsWomen] = useState([]);
